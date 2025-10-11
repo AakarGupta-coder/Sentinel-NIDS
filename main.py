@@ -244,7 +244,7 @@ class NIDSApp:
 
     def _set_favicon(self):
         try:
-            img = Image.open("shield_icon.png") 
+            img = Image.open("assets/shield_icon.png") 
             self.shield_photo = ImageTk.PhotoImage(img)
             self.master.iconphoto(True, self.shield_photo)
             
@@ -253,7 +253,7 @@ class NIDSApp:
 
     def _load_dashboard_logo(self):
         try:
-            original_image = Image.open("shield_icon.png")
+            original_image = Image.open("assets/shield_icon.png")
             target_height = 28 
             aspect_ratio = original_image.width / original_image.height
             target_width = int(target_height * aspect_ratio)
@@ -991,3 +991,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = NIDSApp(root)
     root.mainloop()
+
